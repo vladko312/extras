@@ -18,24 +18,24 @@ This repository contains SSTImap plugins, which might be useful in some specific
 ## List of supported plugins
 | Plugin                                                                             | Ver.  | RCE | Tech | Code evaluation | Type |
 |------------------------------------------------------------------------------------|-------|-----|------|-----------------|------|
-| [expr-eval](https://huntr.com/bounties/1-npm-expr-eval)                            | 1.2.3 | ✓   | REBT | JavaScript      | CVE? |
 | [CVE_2025_1302](https://gist.github.com/nickcopi/11ba3cb4fdee6f89e02e6afae8db6456) | 1.2.3 | ✓   | REBT | JavaScript      | CVE  |
-| [CVE-2022-23614](https://nvd.nist.gov/vuln/detail/CVE-2022-23614)                  | 1.2.3 | ✓   | R_BT | PHP             | CVE  |
-| [CVE_2024_6386](https://sec.stealthcopter.com/wpml-rce-via-twig-ssti/)             | 1.2.3 | ✓   | REBT | PHP             | CVE  |
+| [CVE-2025-13204](https://huntr.com/bounties/1-npm-expr-eval)                       | 1.2.3 | ✓   | REBT | JavaScript      | CVE  |
+| [CVE-2022-23614](https://nvd.nist.gov/vuln/detail/CVE-2022-23614)                  | 1.2.3 | ✓   | REBT | PHP             | CVE  |
+| [CVE-2024-6386](https://sec.stealthcopter.com/wpml-rce-via-twig-ssti/)             | 1.2.3 | ✓   | REBT | PHP             | CVE  |
 | Smarty_old                                                                         | 1.2.3 | ✓   | REBT | PHP             | old  |
 | Jinja2_old                                                                         | 1.2.3 | ✓   | REBT | PHP             | old  |
 
 Techniques: (R)endered, (E)rror-based, (B)oolean error-based blind and (T)ime-based blind; Lowercase letter marks partially supported technique
 
-## Plugin details
-- **[expr-eval](https://huntr.com/bounties/1-npm-expr-eval)** - expr-eval <= 2.0.2 RCE via JavaScript eval
-
-expr-eval up to the latest version 2.0.2 is vulnerable to JavaScript eval injection. Plugin automates detection and exploitation of this flaw providing post-exploitation capabilities.
- 
+## Plugin details 
 - **[CVE_2025_1302](https://gist.github.com/nickcopi/11ba3cb4fdee6f89e02e6afae8db6456)** - JSONPath Plus < 10.3.0 RCE via JavaScript eval
 
 Plugin automates detection and exploitation of [CVE-2025-1302](https://nvd.nist.gov/vuln/detail/CVE-2025-1302) providing post-exploitation capabilities. This plugin can automatically detect many JSONpath injection contexts and more would be added in the future.
- 
+
+- **[CVE-2025-13204](https://huntr.com/bounties/1-npm-expr-eval)** - expr-eval <= 2.0.2 RCE via JavaScript eval
+
+Plugin automates detection and exploitation of [CVE-2025-13204](https://nvd.nist.gov/vuln/detail/CVE-2025-13204) providing post-exploitation capabilities. Node.JS module `expr-eval` up to the latest version 2.0.2 is vulnerable to JavaScript eval injection.
+
 - **[CVE-2022-23614](https://nvd.nist.gov/vuln/detail/CVE-2022-23614)** - Sandbox bypass in Twig >=2.12 <2.14.11 and >=3.0 <3.3.8
 
 Plugin automates detection and exploitation of [CVE-2022-23614](https://nvd.nist.gov/vuln/detail/CVE-2022-23614), bypassing sandbox in Twig using |sort filter with PHP functions.
