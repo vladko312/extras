@@ -6,7 +6,7 @@
 [![Python 3.6](https://img.shields.io/badge/python-3.6+-yellow.svg?logo=python)](https://www.python.org/downloads/release/python-360/)
 [![GitHub](https://img.shields.io/github/license/vladko312/extras?color=green&logo=gnu)](https://www.gnu.org/licenses/gpl-3.0.txt)
 [![GitHub last commit](https://img.shields.io/github/last-commit/vladko312/extras?color=green&logo=github)](https://github.com/vladko312/extras/commits/)
-[![Maintenance](https://img.shields.io/maintenance/yes/2025?logo=github)](https://github.com/vladko312/extras)
+[![Maintenance](https://img.shields.io/maintenance/yes/2026?logo=github)](https://github.com/vladko312/extras)
 
 This repository contains SSTImap plugins, which might be useful in some specific cases, but are too situational to include in the main repository.
 
@@ -18,7 +18,7 @@ This repository contains SSTImap plugins, which might be useful in some specific
 ## List of supported plugins
 | Plugin                                                                             | Ver.  | RCE | Tech | Code evaluation | Type |
 |------------------------------------------------------------------------------------|-------|-----|------|-----------------|------|
-| [CVE_2025_1302](https://gist.github.com/nickcopi/11ba3cb4fdee6f89e02e6afae8db6456) | 1.2.3 | ✓   | REBT | JavaScript      | CVE  |
+| [CVE-2025-1302](https://gist.github.com/nickcopi/11ba3cb4fdee6f89e02e6afae8db6456) | 1.2.3 | ✓   | REBT | JavaScript      | CVE  |
 | [CVE-2025-13204](https://huntr.com/bounties/1-npm-expr-eval)                       | 1.2.3 | ✓   | REBT | JavaScript      | CVE  |
 | [CVE-2022-23614](https://nvd.nist.gov/vuln/detail/CVE-2022-23614)                  | 1.2.3 | ✓   | REBT | PHP             | CVE  |
 | [CVE-2024-6386](https://sec.stealthcopter.com/wpml-rce-via-twig-ssti/)             | 1.2.3 | ✓   | REBT | PHP             | CVE  |
@@ -28,7 +28,7 @@ This repository contains SSTImap plugins, which might be useful in some specific
 Techniques: (R)endered, (E)rror-based, (B)oolean error-based blind and (T)ime-based blind; Lowercase letter marks partially supported technique
 
 ## Plugin details 
-- **[CVE_2025_1302](https://gist.github.com/nickcopi/11ba3cb4fdee6f89e02e6afae8db6456)** - JSONPath Plus < 10.3.0 RCE via JavaScript eval
+- **[CVE-2025-1302](https://gist.github.com/nickcopi/11ba3cb4fdee6f89e02e6afae8db6456)** - JSONPath Plus < 10.3.0 RCE via JavaScript eval
 
 Plugin automates detection and exploitation of [CVE-2025-1302](https://nvd.nist.gov/vuln/detail/CVE-2025-1302) providing post-exploitation capabilities. This plugin can automatically detect many JSONpath injection contexts and more would be added in the future.
 
@@ -40,7 +40,7 @@ Plugin automates detection and exploitation of [CVE-2025-13204](https://nvd.nist
 
 Plugin automates detection and exploitation of [CVE-2022-23614](https://nvd.nist.gov/vuln/detail/CVE-2022-23614), bypassing sandbox in Twig using |sort filter with PHP functions.
  
-- **[CVE_2024_6386](https://sec.stealthcopter.com/wpml-rce-via-twig-ssti/)** - WPML Multilingual CMS Contributor+ RCE via Twig SSTI
+- **[CVE-2024-6386](https://sec.stealthcopter.com/wpml-rce-via-twig-ssti/)** - WPML Multilingual CMS Contributor+ RCE via Twig SSTI
 
 Plugin automates detection and exploitation of [CVE-2024-6386](https://nvd.nist.gov/vuln/detail/CVE-2024-6386) providing post-exploitation capabilities. Correctly set headers `X-WP-Nonce` and `Content-Type` as well as cookies are required for exploitation. Example:
 ```bash
@@ -62,10 +62,10 @@ New plugins are always welcome in PRs
 
 #### Example
 - Install the latest version of SSTImap
-- Copy `CVE_2024_6386.py` plugin to `plugins/custom` inside SSTImap directory
+- Copy `CVE-2024-6386.py` plugin to `plugins/custom` inside SSTImap directory
 - Run the following command:
 ```bash
-./sstimap.py -i -e CVE_2024_6386 -p http://127.0.0.1:8080 --data-type json -m POST -H "Content-Type: application/json" -H "X-WP-Nonce: ..." -H "Cookie: ..." -d '{"id":...,"content":"*"}' -u "http://localhost/index.php?rest_route=%2Fwp%2Fv2%2Fpages%2F..."
+./sstimap.py -i -e CVE-2024-6386 -p http://127.0.0.1:8080 --data-type json -m POST -H "Content-Type: application/json" -H "X-WP-Nonce: ..." -H "Cookie: ..." -d '{"id":...,"content":"*"}' -u "http://localhost/index.php?rest_route=%2Fwp%2Fv2%2Fpages%2F..."
 ```
 - Use `run` command to test the payload
 - Edit the payload, use commands `reload` and `run`
