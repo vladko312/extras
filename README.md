@@ -1,7 +1,7 @@
 [SSTImap](https://github.com/vladko312/sstimap) Extra Plugins
 ======
 [![SSTImap 1.3](https://img.shields.io/badge/SSTImap-1.3-green.svg?logo=github)](https://github.com/vladko312/sstimap)
-[![Payload count](https://img.shields.io/badge/Plugins-6-green.svg?logo=github)](https://github.com/vladko312/extras)
+[![Payload count](https://img.shields.io/badge/Plugins-7-green.svg?logo=github)](https://github.com/vladko312/extras)
 [![Python 3.14](https://img.shields.io/badge/python-3.14-blue.svg?logo=python)](https://www.python.org/downloads/release/python-3140/)
 [![Python 3.6](https://img.shields.io/badge/python-3.6+-yellow.svg?logo=python)](https://www.python.org/downloads/release/python-360/)
 [![GitHub](https://img.shields.io/github/license/vladko312/extras?color=green&logo=gnu)](https://www.gnu.org/licenses/gpl-3.0.txt)
@@ -22,6 +22,7 @@ This repository contains SSTImap plugins, which might be useful in some specific
 | [CVE-2025-13204](https://huntr.com/bounties/1-npm-expr-eval)                       | 1.2.3 | ✓   | REBT | JavaScript      | CVE  |
 | [CVE-2022-23614](https://nvd.nist.gov/vuln/detail/CVE-2022-23614)                  | 1.2.3 | ✓   | REBT | PHP             | CVE  |
 | [CVE-2024-6386](https://sec.stealthcopter.com/wpml-rce-via-twig-ssti/)             | 1.2.3 | ✓   | REBT | PHP             | CVE  |
+| [CVE-2026-46640](https://nvd.nist.gov/vuln/detail/CVE-2026-46640)                  | 1.2.3 | ✓   | REBT | PHP             | CVE  |
 | Smarty_old                                                                         | 1.2.3 | ✓   | REBT | PHP             | old  |
 | Jinja2_old                                                                         | 1.2.3 | ✓   | REBT | PHP             | old  |
 
@@ -46,7 +47,11 @@ Plugin automates detection and exploitation of [CVE-2024-6386](https://nvd.nist.
 ```bash
 ./sstimap.py -i -e CVE_2024_6386 --data-type json -m POST -H "Content-Type: application/json" -H "X-WP-Nonce: ..." -H "Cookie: ..." -d '{"id":...,"content":"*"}' -u "http://localhost/index.php?rest_route=%2Fwp%2Fv2%2Fpages%2F..."
 ```
- 
+
+- **[CVE-2026-46640](https://nvd.nist.gov/vuln/detail/CVE-2026-46640)** - Sandbox bypass in Twig >=3.15.0 <3.26.0
+
+Plugin automates detection and exploitation of [CVE-2026-46640](https://nvd.nist.gov/vuln/detail/CVE-2026-46640), bypassing sandbox in Twig using _self.("...") code injection.
+
 - **Smarty_old** - Smarty template engine prior to version 3.0 using {php}{/php} tags
  
 - **Jinja2_old** - Old long payloads for Jinja template engine
