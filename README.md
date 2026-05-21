@@ -1,7 +1,7 @@
 [SSTImap](https://github.com/vladko312/sstimap) Extra Plugins
 ======
 [![SSTImap 1.3](https://img.shields.io/badge/SSTImap-1.3-green.svg?logo=github)](https://github.com/vladko312/sstimap)
-[![Payload count](https://img.shields.io/badge/Plugins-6-green.svg?logo=github)](https://github.com/vladko312/extras)
+[![Payload count](https://img.shields.io/badge/Plugins-7-green.svg?logo=github)](https://github.com/vladko312/extras)
 [![Python 3.14](https://img.shields.io/badge/python-3.14-blue.svg?logo=python)](https://www.python.org/downloads/release/python-3140/)
 [![Python 3.6](https://img.shields.io/badge/python-3.6+-yellow.svg?logo=python)](https://www.python.org/downloads/release/python-360/)
 [![GitHub](https://img.shields.io/github/license/vladko312/extras?color=green&logo=gnu)](https://www.gnu.org/licenses/gpl-3.0.txt)
